@@ -5,3 +5,7 @@ you can customise the root password by adding the SHA-256 hash to the build file
 
 ## to generate a new root password  SHA512
 openssl passwd -6 -salt XYZ password
+
+## To Build the image
+
+docker build . -t jemaiah/zeppelin-docker:0.8.2
