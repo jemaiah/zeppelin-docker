@@ -16,6 +16,8 @@ if [[ ${ZEP_ADM_PASS} != "" ]]
 then
 	echo " setting zeppelin admin password"
 	sed -i -e "s/password1/${ZEP_ADM_PASS}/g" /home/zeppelin/latest/conf/shiro.ini
+        sed -i -e "s/#admin/admin/g" /home/zeppelin/latest/conf/shiro.ini  
+
 fi
 if [[ ${ZEP_USER1_PASS} != "" ]]
 then
@@ -32,6 +34,8 @@ then
 	echo " setting zeppelin USER3 password"
 	sed -i -e "s/password4/${ZEP_USER3_PASS}/g" /home/zeppelin/latest/conf/shiro.ini
 fi
+
+sed 's/127.0.0.1/0.0.0.0/g'  /home/zeppelin/latest/conf/zeppelin-site.xml.template >  /home/zeppelin/latest/conf/zeppelin-site.xml
 
 $@
 

@@ -1,1 +1,1 @@
-docker run -it -d -p 8080:8080 -p 8443:8443 -v zep-notebook:/home/zeppelin/latest/notebook -v zep-logs:/home/zeppelin/latest/logs -e ZEP_ADM_PASS=admin -e ZEP_USER1_PASS=user1 -e ZEP_USER2_PASS=user2 -e ZEP_USER3_PASS=user3 --name zeppelin jemaiah/zeppelin-docker:0.1
+docker run -it -d -p 8080:8080 -p 8443:8443 -v zep-notebook:/home/zeppelin/latest/notebook -v zep-logs:/home/zeppelin/latest/logs -e ZEP_ADM_PASS=admin -e ZEP_USER1_PASS=user1 -e ZEP_USER2_PASS=user2 -e ZEP_USER3_PASS=user3 --name zeppelin jemaiah/zeppelin-docker:0.8.2
